@@ -1,0 +1,14 @@
+public class Solution {
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) {
+        int count = 0;
+        long nn = Integer.toUnsignedLong(n);
+        System.out.println(nn);
+        while(nn > 0){
+            nn = nn - (nn & (-nn));
+            count++;
+        }
+        
+        return count;
+    }
+}
